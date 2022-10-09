@@ -5,7 +5,7 @@ pipeline {
 				customWorkspace '/mnt/project/assignment1/22Q2'
 			}
 		}
-		Stages {
+		stages {
 			/* stage('kill') {
 				steps {
 					sh "docker kill 22Q2"
@@ -13,8 +13,8 @@ pipeline {
 					sh "docker rmi httpd"
 				}
 			} */
-			Stage('docker-22Q2') {
-				Steps {
+			stage('docker-22Q2') {
+				steps {
 					sh "docker run --name 22Q2 -itdp 80:80 httpd"
 					sh "chmod -R 777 /mnt/project/assignment1/22Q2/index.html"
 					sh "cd /mnt/project/assignment1/22Q2 && docker cp index.html 22Q2:/usr/local/apache2/htdocs/"
