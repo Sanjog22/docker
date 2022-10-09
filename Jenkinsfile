@@ -11,6 +11,7 @@ pipeline {
 					sh "docker kill 22Q3"
 					sh "docker rm 22Q3"
 					
+				
 				}
 			} 
 			stage('docker-22Q3') {
