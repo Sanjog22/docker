@@ -10,7 +10,7 @@ pipeline {
 				steps {
 					sh "docker kill 22Q3"
 					sh "docker rm 22Q3"
-					sh "docker rmi httpd"
+					
 				}
 			} 
 			stage('docker-22Q3') {
