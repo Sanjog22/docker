@@ -6,13 +6,13 @@ pipeline {
 			}
 		}
 		stages {
-			 stage('kill') {
+			 /* stage('kill') {
 				steps {
 					sh "docker kill 22Q3"
 					sh "docker rm 22Q3"
 					
 				}
-			} 
+			} */
 			stage('docker-22Q3') {
 				steps {
 					sh "docker run --name 22Q3 -itdp 90:80 httpd"
